@@ -11,6 +11,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 
 class UserResource extends Resource
 {
@@ -32,9 +33,11 @@ class UserResource extends Resource
                     ->password()
                     ->label('Password')
                     ->required(),
-                SpatieMediaLibraryFileUpload::make('picture')
-                    ->label('Picture')
-                    ->collection('picture')
+                FileUpload::make('picture')
+                    ->label('Picture'),
+                // SpatieMediaLibraryFileUpload::make('picture')
+                //     ->label('Picture')
+                //     ->collection('picture')
             ]);
     }
 
