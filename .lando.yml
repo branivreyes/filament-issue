@@ -1,4 +1,4 @@
-name: filament-issues
+name: filament-issue
 recipe: laravel
 config:
   php: 8.3
